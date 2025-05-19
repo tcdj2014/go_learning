@@ -18,7 +18,7 @@ const (
 	bufferSize  = 128 * 1024 * 1024 // 64MB缓冲区
 )
 
-func main() {
+func createSsccMain() {
 	file, err := os.Create(outputFile)
 	if err != nil {
 		fmt.Printf("file create faile: %v\n", err)

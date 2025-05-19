@@ -26,7 +26,7 @@ var pool = sync.Pool{
 	},
 }
 
-func main() {
+func instertSsccMain() {
 	// 1. 初始化数据库连接池
 	db := initDB("username:passwd@tcp(db_host:db_port)/db_name?parseTime=true&timeout=" + mysqlTimeout)
 	defer db.Close()

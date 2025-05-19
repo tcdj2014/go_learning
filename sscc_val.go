@@ -38,7 +38,7 @@ func CalculateSSCCCheckDigit(ssccWithoutCheckDigit string) (int, error) {
 	return checkDigit, nil
 }
 
-func main() {
+func ssccValMain() {
 	// 示例：输入一个17位的SSCC码（不包含校验位）
 	ssccWithoutCheckDigit := "13597920999999982"
 
