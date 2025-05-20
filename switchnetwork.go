@@ -81,9 +81,13 @@ func runCustomScript(ssid string) error {
 		}
 		time.Sleep(10 * time.Second)
 		cmd := exec.Command("bash", "-c", "sudo route -n add -net 10.110.19.0 -netmask 255.255.255.0 10.110.15.254")
-		output, err := cmd.CombinedOutput()
+		_, err := cmd.CombinedOutput()
 		if err != nil {
-			println(output)
+			return err
+		}
+		cmd = exec.Command("bash", "-c", "networksetup -setdnsservers Wi-Fi empty")
+		_, err = cmd.CombinedOutput()
+		if err != nil {
 			return err
 		}
 	default:
