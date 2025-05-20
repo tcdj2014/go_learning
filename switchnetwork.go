@@ -91,7 +91,7 @@ func runCustomScript(ssid string) error {
 			return err
 		}
 	default:
-		return nil // 不处理未知SSID
+		return defaultNetwork()
 	}
 	return nil
 }
