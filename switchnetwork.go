@@ -85,7 +85,7 @@ func runCustomScript(ssid string) error {
 		if err != nil {
 			return err
 		}
-		cmd = exec.Command("bash", "-c", "networksetup -setdnsservers Wi-Fi empty")
+		cmd = exec.Command("bash", "-c", "networksetup -setdnsservers Wi-Fi 10.110.15.228")
 		_, err = cmd.CombinedOutput()
 		if err != nil {
 			return err
