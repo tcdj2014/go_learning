@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-func switchNetworkMain() {
+func SwitchNetworkMain() {
 	watcher, _ := fsnotify.NewWatcher()
 	defer watcher.Close()
 	watcher.Add("/Library/Preferences/SystemConfiguration/com.apple.wifi.message-tracer.plist")
